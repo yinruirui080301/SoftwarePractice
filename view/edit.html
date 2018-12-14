@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+  <div class="container">
+     <div class="page-header">
+         <h1><a href="#">我的音乐</a> <small><%= title %></small></h1>
+        
+     </div>
+     <form action="/edit?id=<% music.id %>" method="post" >
+        <div class="form-group">
+          <label for="title">标题</label>
+          <input type="text" class="form-control" id="title" name="title" placeholder="请输入音乐标题" value='<%= music.title %>'/>
+        </div>
+        <div class="form-group">
+          <label for="singer">歌手</label>
+          <input type="text" class="form-control" id="singner" name="singer" placeholder="请输入歌手名字" value="<%= music.singer %>"/>
+        </div>
+        
+        <button type="submit" class="btn btn-success">确定修改</button>
+     </form>
+  </div>
+</body>
+</html>
